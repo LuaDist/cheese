@@ -1,0 +1,14 @@
+--- This file is part of LuaDist project
+
+name = "cheese"
+version = "0.1alpha"
+
+desc = "Cheese PEG parser generator"
+author = "Fabio Mascarenhas"
+license = "MIT"
+maintainer = "Peter Kapec"
+url = "http://luaforge.net/projects/cheese/"
+
+depends = {
+	"lua ~> 5.1"
+}
