@@ -1,18 +1,21 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2011 LuaDist.
 # Created by Peter Kapec
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(cheese NONE)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( cheese NONE )
+cmake_minimum_required ( VERSION 2.6 )
+include ( dist.cmake )
 
-# Cheese modules
-INSTALL (FILES src/cheese.lua DESTINATION ${INSTALL_LMOD})
-INSTALL (FILES src/stream/file.lua src/stream/string.lua DESTINATION ${INSTALL_LMOD}/stream)
-INSTALL (FILES src/parsers.lua src/luap/luap.lua DESTINATION ${INSTALL_LMOD}/cheese)
-INSTALL (FILES src/luap/dump.lua DESTINATION ${INSTALL_LMOD}/cheese/luap)
-INSTALL (FILES README DESTINATION ${INSTALL_DATA})
-INSTALL (DIRECTORY doc/ DESTINATION ${INSTALL_DOC})
-INSTALL (DIRECTORY test/ DESTINATION ${INSTALL_TEST})
+install_lua_module ( cheese src/cheese.lua )
+install_lua_module ( stream.file src/stream/file.lua )
+install_lua_module ( stream.string src/stream/string.lua )
+install_lua_module ( cheese.parsers src/parsers.lua )
+install_lua_module ( cheese.luap src/luap/luap.lua )
+install_lua_module ( cheese.luap.dump src/luap/dump.lua )
+install_data ( README )
+install_doc ( doc/ )
+install_test ( test/ )
+
+#FIX-path: add_lua_test ( test/test.lua )
