@@ -1,0 +1,65 @@
+type = "x86"
+arch = "Windows"
+author = "Fabio Mascarenhas"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "Cheese PEG parser generator"
+version = "0.1alpha"
+maintainer = "Peter Kapec"
+files = {
+Runtime = {
+[[lib\lua\cheese.lua]],
+[[lib\lua\stream\file.lua]],
+[[lib\lua\stream\string.lua]],
+[[lib\lua\cheese\parsers.lua]],
+[[lib\lua\cheese\luap.lua]],
+[[lib\lua\cheese\luap\dump.lua]],
+}
+,
+Documentation = {
+[[share\cheese\doc\\cheese.txt]],
+[[share\cheese\doc\\dump.txt]],
+[[share\cheese\doc\\luap.txt]],
+[[share\cheese\doc\\stream.txt]],
+}
+,
+Data = {
+[[share\cheese\README]],
+}
+,
+Test = {
+[[share\cheese\test\\analyze.lua]],
+[[share\cheese\test\\files\bisect.lua]],
+[[share\cheese\test\\files\cf.lua]],
+[[share\cheese\test\\files\dis_x86.lua]],
+[[share\cheese\test\\files\echo.lua]],
+[[share\cheese\test\\files\env.lua]],
+[[share\cheese\test\\files\factorial.lua]],
+[[share\cheese\test\\files\fib.lua]],
+[[share\cheese\test\\files\fibfor.lua]],
+[[share\cheese\test\\files\globals.lua]],
+[[share\cheese\test\\files\hello.lua]],
+[[share\cheese\test\\files\life.lua]],
+[[share\cheese\test\\files\luac.lua]],
+[[share\cheese\test\\files\printf.lua]],
+[[share\cheese\test\\files\readonly.lua]],
+[[share\cheese\test\\files\sieve.lua]],
+[[share\cheese\test\\files\sort.lua]],
+[[share\cheese\test\\files\string.lua]],
+[[share\cheese\test\\files\table.lua]],
+[[share\cheese\test\\files\trace-calls.lua]],
+[[share\cheese\test\\files\trace-globals.lua]],
+[[share\cheese\test\\files\xd.lua]],
+[[share\cheese\test\\parse.lua]],
+[[share\cheese\test\\parse2.lua]],
+[[share\cheese\test\\test-files]],
+[[share\cheese\test\\test.lua]],
+}
+,
+}
+
+license = "MIT"
+name = "cheese"
+url = "http://luaforge.net/projects/cheese/"
